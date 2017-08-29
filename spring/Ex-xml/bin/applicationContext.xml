@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean  name="employeeRepository" class="com.indu.app.Ex1.repository.HibernateEmployeeRepository">
+	</bean>
+
+	<bean name="employeeService" class="com.indu.app.Ex1.service.EmployeeService" autowire="byName">
+
+	<!-- <bean name="employeeService" class="com.indu.app.Ex1.service.EmployeeService" autowire="constructor">
+	<bean name="employeeService" class="com.indu.app.Ex1.service.EmployeeService" autowire="byType">-->
+
+	<!-- <constructor-arg index="0" ref="employeeRepository"></constructor-arg>-->
+
+	<!--<property name="employeeRepository" ref="employeeRepository"></property>--> 
+</bean>
+
+
+</beans>

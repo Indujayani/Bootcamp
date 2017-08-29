@@ -1,0 +1,28 @@
+<html>
+	<head>
+	<title></title>
+	
+
+	</head>
+	<body>
+	
+		<script>
+		var printer=function(){
+		var j1=function(){
+			document.write("job 1 is printing <br/>");
+			}
+		var j2=function(){
+			document.write("job 2 is printing <br/>");
+			}
+			return {
+			printJob1:j1,
+			printJob2:j2}
+		}
+		var prn=printer();
+		prn.printJob1();
+		prn.printJob2();
+	
+		</script>
+	</body>
+
+</html>

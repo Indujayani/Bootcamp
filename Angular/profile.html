@@ -1,0 +1,26 @@
+<html ng-app="profile">
+	<head>
+	<title>Profile</title>
+		<script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+		</script>
+		<script type="application/javascript" src="profile.js"></script>
+	</head>
+	<body ng-controller="profileController">
+	
+		<div>Message :
+		
+			{{message}}
+		</div>
+		<div>Name : :
+		
+			{{employee.name}}
+		</div>
+		<div>City :
+		
+			{{employee.city}}
+		</div>
+		<div><img ng-src="{{employee.image}}">
+		</div>
+	</body>
+
+</html>

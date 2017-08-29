@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 15, 2017 11:36:52 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.indu.model.Employee" table="EMPLOYEE">
+		<id name="empId" type="int">
+			<column name="EMPID" />
+			<generator class="increment" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="age" type="int">
+			<column name="AGE" />
+		</property>
+
+		<component name="allocationData">
+			<property name="city" type="java.lang.String">
+				<column name="CITY" />
+			</property>
+			<property name="mobile" type="java.lang.String">
+				<column name="MOBILE" />
+			</property>
+		</component>
+
+		<set name="histories" table="ALLOCATION_HISTORY">
+			<key column="id" />
+			<composite-element class="com.indu.model.AllocationHistory">
+				<property name="projectCode" column="projectCode"></property>
+				<property name="projectName" column="projectName"></property>
+			</composite-element>
+		</set>
+
+	</class>
+</hibernate-mapping>
